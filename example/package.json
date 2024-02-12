@@ -1,0 +1,17 @@
+{
+  "name": "vite-plugin-query-hash-example",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env DEBUG=*ruby:* vite build --mode production",
+    "preview": "cross-env RAILS_ENV=production DEBUG=*ruby:* vite preview --open"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "vite": "^5",
+    "vite-plugin-query-hash": "workspace:*",
+    "vite-plugin-ruby": "^5"
+  }
+}

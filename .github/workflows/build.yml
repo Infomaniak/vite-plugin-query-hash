@@ -1,0 +1,35 @@
+name: Build Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21.x
+
+      - uses: pnpm/action-setup@v3.0.0
+        with:
+          version: latest
+          run_install: |
+            - recursive: false
+
+      - name: build
+        run: pnpm build
+
+      - name: test
+        run: pnpm test
+
+      - name: github release
+        run: npx -p @semantic-release/github -p conventional-changelog-conventionalcommits -p semantic-release semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

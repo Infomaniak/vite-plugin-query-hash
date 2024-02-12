@@ -1,0 +1,7 @@
+{
+  "name": "vite-plugin-query-hash-tests",
+  "private": true,
+  "devDependencies": {
+    "vite-plugin-query-hash": "workspace:*"
+  }
+}

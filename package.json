@@ -1,0 +1,42 @@
+{
+  "name": "vite-plugin-query-hash",
+  "version": "0.0.0",
+  "description": "Vite plugin that adds a query param hash to assets via the manifest",
+  "files": [
+    "dist/",
+    "LICENSE.txt",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm --clean"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "vitejs",
+    "plugin"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20",
+    "cross-spawn": "7.0.3",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vite": "^5",
+    "vitest": "^1"
+  }
+}
