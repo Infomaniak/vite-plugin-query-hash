@@ -31,6 +31,11 @@
     "plugin"
   ],
   "license": "MIT",
+  "author": "antonbuks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonbuks/vite-plugin-query-hash"
+  },
   "devDependencies": {
     "@types/node": "^20",
     "cross-spawn": "7.0.3",
