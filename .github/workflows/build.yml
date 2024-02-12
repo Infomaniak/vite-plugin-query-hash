@@ -29,7 +29,8 @@ jobs:
       - name: test
         run: pnpm test
 
-      - name: github release
+      - name: release
         run: npx -p @semantic-release/github -p conventional-changelog-conventionalcommits -p semantic-release semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
