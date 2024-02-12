@@ -14,8 +14,6 @@ This plugin extends `manifest.json` and adds a configurable query param to each 
 
 I built and tested this mostly for my own deployment use cases.
 
-Repo structure and idea comes from
-
 ## Installation & Usage
 
 Install the package as a development dependency:
@@ -35,12 +33,13 @@ export default defineConfig({
     queryHash(),
   ],
 })
+````
 
 The [`build.manifest`](https://vitejs.dev/config/#build-manifest) option must be enabled in order to generate a `manifest.json` file. This option is enabled by default in most configurations.
 
 You must also disable default vite filename hashing via the [`build.rollupOptions`](https://vitejs.dev/config/build-options.html#build-rollupoptions) configuration:
 
-```ts
+````ts
 build: {
   rollupOptions: {
     output: {
@@ -50,7 +49,7 @@ build: {
     },
   },
 }
-```
+````
 
 ## Configuration
 
@@ -90,3 +89,7 @@ The following options can be provided:
   ```ts
   queryHash({ manifestPaths: ['custom/path/manifest.json', 'another/manifest.json'] })
   ```
+
+## Acknowledgements
+
+Repo structure and idea based on [`vite-plugin-manifest-sri`](https://github.com/ElMassimo/vite-plugin-manifest-sri)
