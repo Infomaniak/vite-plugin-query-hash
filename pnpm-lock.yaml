@@ -42,6 +42,12 @@ importers:
         specifier: ^5
         version: 5.0.0(vite@5.1.1)
 
+  tests:
+    devDependencies:
+      vite-plugin-query-hash:
+        specifier: workspace:*
+        version: link:..
+
 packages:
 
   /@esbuild/aix-ppc64@0.19.12:
