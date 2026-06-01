@@ -42,6 +42,6 @@
     "tsup": "^8",
     "typescript": "^5",
     "vite": "^5",
-    "vitest": "^1"
+    "vitest": "^4"
   }
 }
