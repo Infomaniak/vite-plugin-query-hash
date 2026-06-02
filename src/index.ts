@@ -59,6 +59,12 @@ async function appendQueryParamToManifest(
     Object.values(manifest).forEach((chunk) => {
       const queryParam = `?${queryParamName}=${queryParamValue}`;
       chunk.file += queryParam;
+      chunk.css?.forEach((file, index) => {
+        chunk.css![index] = file + queryParam;
+      });
+      chunk.assets?.forEach((file, index) => {
+        chunk.assets![index] = file + queryParam;
+      });
     });
     await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2));
   }
