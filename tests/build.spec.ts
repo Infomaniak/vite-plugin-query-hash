@@ -15,7 +15,7 @@ describe("build", () => {
 
     expect(manifest["dynamic.ts"].file).toMatch(pattern);
 
-    expect(manifest["entrypoints/styles.css"].file).toMatch(pattern);
+    expect(manifest["entrypoints/main.ts"].css[0]).toMatch(pattern);
   });
 });
 
