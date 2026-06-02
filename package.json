@@ -34,7 +34,7 @@
   "author": "antonbuks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antonbuks/vite-plugin-query-hash"
+    "url": "https://github.com/Infomaniak/vite-plugin-query-hash"
   },
   "devDependencies": {
     "@types/node": "^25",
