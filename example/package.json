@@ -9,8 +9,8 @@
     "preview": "cross-env RAILS_ENV=production DEBUG=*ruby:* vite preview --open"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "vite": "^5",
+    "cross-env": "^10.1.0",
+    "vite": "^8",
     "vite-plugin-query-hash": "workspace:*",
     "vite-plugin-ruby": "^5"
   }
